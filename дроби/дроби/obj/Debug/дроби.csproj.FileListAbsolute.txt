@@ -1,0 +1,7 @@
+C:\Users\user\source\repos\дроби\дроби\bin\Debug\дроби.exe.config
+C:\Users\user\source\repos\дроби\дроби\bin\Debug\дроби.exe
+C:\Users\user\source\repos\дроби\дроби\bin\Debug\дроби.pdb
+C:\Users\user\source\repos\дроби\дроби\obj\Debug\дроби.csprojAssemblyReference.cache
+C:\Users\user\source\repos\дроби\дроби\obj\Debug\дроби.csproj.CoreCompileInputs.cache
+C:\Users\user\source\repos\дроби\дроби\obj\Debug\дроби.exe
+C:\Users\user\source\repos\дроби\дроби\obj\Debug\дроби.pdb
