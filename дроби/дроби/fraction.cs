@@ -21,7 +21,15 @@ namespace дроби //описать класс дробей и провери�
         }
         public string ToString()
         {
-            return nominator + "/" + deNominator;
+            if (deNominator == 1)
+            {
+                
+                return Convert.ToString(nominator);
+            }
+            else
+            {
+                return nominator + "/" + deNominator;
+            }
         }
         public Fraction Minus(Fraction x)
         {
@@ -44,6 +52,22 @@ namespace дроби //описать класс дробей и провери�
             y.deNominator = deNominator * x.nominator;
             return y;
         }
+        public Fraction NOD(Fraction x)
+        {
+            Fraction y = new Fraction();
+            for (int i = 2; i < 100; i++)
+            {
+                int xyi = x.nominator % i;
+                int jopa = x.deNominator % i;
+                if ((xyi == 0) && (jopa == 0))
+                {
+                    y.nominator = x.nominator / i;
+                    y.deNominator = x.deNominator / i;
+                    break;
+                }
+            }
+            return y;
+        }
 
         static void Main(string[] args)
         {
@@ -55,14 +79,17 @@ namespace дроби //описать класс дробей и провери�
             fraction2.nominator = Convert.ToInt32(Console.ReadLine());
             fraction2.deNominator = Convert.ToInt32(Console.ReadLine());
 
-            Fraction result1 = fraction1.Pluse(fraction2);
-            Console.WriteLine("сумма:"+result1.ToString());
-            Fraction result2 = fraction1.Minus(fraction2);
-            Console.WriteLine("разница:"+result2.ToString());
-            Fraction result3 = fraction1.Multi(fraction2);
-            Console.WriteLine("произведение:"+result3.ToString());
-            Fraction result4 = fraction1.Devide(fraction2);
-            Console.WriteLine("частное:" + result4.ToString());
+            //Fraction result1 = fraction1.Pluse(fraction2);
+            //Console.WriteLine("сумма:"+result1.ToString());
+            //Fraction result2 = fraction1.Minus(fraction2);
+            //Console.WriteLine("разница:"+result2.ToString());
+            //Fraction result3 = fraction1.Multi(fraction2);
+            //Console.WriteLine("произведение:"+result3.ToString());
+            //Fraction result4 = fraction1.Devide(fraction2);
+            //Console.WriteLine("частное:" + result4.ToString());
+            //Console.ReadLine();
+            Fraction result1 = fraction1.NOD(fraction1);
+            Console.WriteLine(result1.ToString());
             Console.ReadLine();
 
         }
